@@ -264,6 +264,7 @@ var styles = StyleSheet.create({
 * [headers](#headers)
 * [id](#id)
 * [ignoreSilentSwitch](#ignoresilentswitch)
+* [maxBitRate](#maxbitrate)
 * [muted](#muted)
 * [paused](#paused)
 * [playInBackground](#playinbackground)
@@ -398,6 +399,16 @@ Controls the iOS silent switch behavior
 * **"obey"** - Don't play audio if the silent switch is set
 
 Platforms: iOS
+
+#### maxBitRate
+Sets the desired limit, in bits per second, when multiple video streams are available for a playlist.
+
+Example:
+```
+maxBitRate={2000000} // 2 megabits
+```
+
+Platforms: Android ExoPlayer, iOS
 
 #### muted
 Controls whether the audio is muted
@@ -548,8 +559,6 @@ Sets the media source. You can pass an asset loaded via require or an object wit
 
 The docs for this prop are incomplete and will be updated as each option is investigated and tested.
 
-#### maximumBitRate
-Sets the maximum bit rate for HLS media sources. If an HLS m3u8 manifest describes multiple streams, the maximum bit rate determines the video stream selected
 
 ##### Asset loaded via require
 

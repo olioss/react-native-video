@@ -1255,39 +1255,24 @@ static int const RCTVideoUnset = -1;
 }
 
 - (void)setFilter:(NSString *)filterName {
-
     _filterName = filterName;
-
     AVAsset *asset = _playerItem.asset;
 
     if (asset != nil) {
-
         CIFilter *filter = [CIFilter filterWithName:filterName];
-
         _playerItem.videoComposition = [AVVideoComposition
                 videoCompositionWithAsset:asset
              applyingCIFiltersWithHandler:^(AVAsynchronousCIImageFilteringRequest *_Nonnull request) {
-
                  if (filter == nil) {
-
                      [request finishWithImage:request.sourceImage context:nil];
-
                  } else {
-
                      CIImage *image = request.sourceImage.imageByClampingToExtent;
-
                      [filter setValue:image forKey:kCIInputImageKey];
-
                      CIImage *output = [filter.outputImage imageByCroppingToRect:request.sourceImage.extent];
-
                      [request finishWithImage:output context:nil];
-
                  }
-
              }];
-
     }
-
 }
 
 #pragma mark - React View Management

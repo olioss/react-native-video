@@ -360,8 +360,8 @@ Add video filter
 * **FilterType.MONOCHROME** - CIColorMonochrome
 * **FilterType.POSTERIZE** - CIColorPosterize
 * **FilterType.FALSE** - CIFalseColor
-* **FilterType.MAXIMUMCOMPONENT** - CIMaximumComponent
-* **FilterType.MINIMUMCOMPONENT** - CIMinimumComponent
+* **FilterType.MAXIMUM_COMPONENT** - CIMaximumComponent
+* **FilterType.MINIMUM_COMPONENT** - CIMinimumComponent
 * **FilterType.CHROME** - CIPhotoEffectChrome
 * **FilterType.FADE** - CIPhotoEffectFade
 * **FilterType.INSTANT** - CIPhotoEffectInstant
